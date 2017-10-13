@@ -26,6 +26,7 @@ export default class SimpleMDEEditor extends Component {
   }
 
   componentDidMount() {
+    if (!process.env.IS_BROWSER) return;
     this.createEditor();
     this.addEvents();
     this.addExtraKeys();
