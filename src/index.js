@@ -1,13 +1,12 @@
 import generateId from './services/idGenerator';
 import NOOP from './utils/noop';
 import React, { Component } from 'react';
+import { autobind } from 'core-decorators';
 
 export default class SimpleMDEEditor extends Component {
-  getInitialState() {
-    return {
-      keyChange: false
-    }
-  }
+  state = {
+    keyChange: false
+  };
 
   getDefaultProps() {
     return {
@@ -57,6 +56,7 @@ export default class SimpleMDEEditor extends Component {
     this.simplemde = new SimpleMDE(allOptions);
   }
 
+  @autobind
   eventWrapper() {
     this.setState({
       keyChange: true

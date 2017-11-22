@@ -6,6 +6,7 @@
   "author": "Ben Lodge",
   "license": "MIT",
   "dependencies": {
+    "core-decorators": "^0.20.0",
     "simplemde": "^1.11.2"
   },
   "main": "lib/index.js",
